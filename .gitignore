@@ -1,0 +1,29 @@
+# Byte-code files
+*.pyc
+__pycache__/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Database files
+db.sqlite3
+
+# Media and static files (if served locally and not part of the source control)
+#media/
+#static_collected/
+
+# Log files
+*.log
+
+# Editor/OS specific files (e.g., macOS, VS Code)
+.DS_Store
+.vscode/
+
+# Local settings (containing sensitive information like SECRET_KEY)
+local_settings.py
+
+# else
+satou.txt
+.env

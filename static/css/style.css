@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* パディングとボーダーは指定した幅・高さの中に収まる */
+}
+
+body {
+  /* background: #f1f1f1; */
+/*  background-image: url("/images/wallpaper3.jpg");  画像のパスを指定 */
+  /*  background-size: cover;  画面全体を覆うように画像サイズを調整 */
+  /*  background-repeat: repeat;  画像を繰り返さない */
+  /*  background-position: center;  画像の中心を中央に表示 */
+  display: flex;
+  flex-flow: column;
+  /* 縦並び、上寄せで配置 */
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  /* 
+  「flex-grow: 1;」、「flex-shrink: 1;」、「flex-basis: 0;」の3つ同時に指定
+  「flex-grow: 1;」と同じで、flexアイテムを伸ばすプロパティ
+   */
+}
+
+.yellowbox {
+		outline: 1px solid yellow;
+}
+
+.whitebox {
+		outline: 1px solid white;
+}
+
+.redbox {
+		outline: 1px solid red;
+}
+
+.resizeimage img { width: 100%; }
+
+.my-background {
+  /* background-color: #331509; */
+  background-color: #2b485e;
+}
+
+/* shop */
+
+.shop table, tr, td {
+  /* border: 1px solid black; */
+  border-color: #331509;
+  border-width: 1px;
+  border-collapse: collapse ;
+}
+
+.shop .bgcolor {
+  background: #ded6d2;
+}
+
+.shop td {
+  padding: 4px;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: calc(450 / 600 * 100%);  /* height ÷ width × 100 */
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

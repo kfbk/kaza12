@@ -1,0 +1,72 @@
+{% extends "app/base.html" %} {% block content %}
+{% load static %}
+
+<div class="row my-2">
+  <div class="col-md-6">
+    <h2>海がないのに、潮の香りがする。</h2>
+    <div>食材の仕入れから、仕事は始まる。<br >
+    市場、農家、⾖腐屋さん・・・大将、そしてスタッフが駆け回る。<br >
+    地元には海がない。でも、ここなら生の魚が楽しめる。<br >
+    地元の朝採り野菜やオーガニック食品という贅沢も添えて。
+    </div>
+  </div>
+  <div class="col-md-6 resizeimage">
+    <img src="{% static 'img/indexphoto1.jpg' %}">
+  </div>
+</div>
+<div class="row mb-2">
+  <div class="col-12 my-background text-center text-white py-5">
+    今、この瞬間の贅沢です。旬のメニュー
+  </div>
+</div>
+<div class="row my-2">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">
+          お知らせ
+        </div>
+        {% for post in post_data %}
+            <div class="card-text px-2 py-3">
+                {{ post.created_at|date:"Y-m-d" }}：{{ post.title }}
+            </div>
+        {% empty %}
+            <p>まだお知らせがありません</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mb-2 my-background text-white">
+  <!-- <div class="col-12">
+    <div class="row"> -->
+      <div class="col-md-3 resizeimage">
+        <img src="{% static 'img/indexphoto2.jpg' %}">
+      </div>
+      <div class="col-md-9">
+        <h3>日本酒も焼酎、ワインも豊富！</h3>
+        <div>
+          自慢はお酒の品ぞろえ。イチローズモルトをはじめとするウイスキー、焼酎はしそ、黒糖、麦、米、芋、泡盛各種。日本酒も多くの銘柄があります。正直、メニューに載せきれません。
+        </div>
+      </div>
+    <!-- </div>
+  </div> -->
+</div>
+<div class="row mb-2">
+  <div class="col-12">
+    <h3>南口から徒歩1分！1次会、2次会にも最適。</h3>
+    <div class="row">
+      <div class="col-md-4 resizeimage">
+          <img src="{% static 'img/indexphoto3.jpg' %}">
+      </div>
+      <div class="col-md-8">
+        居酒屋XXX<br >
+        TEL:0XXX-XX-XXXX<br >
+        16:00開店<br >
+        日曜・月曜定休
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
