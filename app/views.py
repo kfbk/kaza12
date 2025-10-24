@@ -11,7 +11,8 @@ class IndexView(View):
     ordering = '-id'
     context_object_name = 'posts'   # HTMLに渡す
     def get(self, request, *args, **kwargs):
-        post_data = Post.objects.all()
+        # post_data = Post.objects.all()
+        post_data = Post.objects.order_by('-id')[:5]
         return render(request, 'app/index.html', {
             'post_data': post_data,
         })
@@ -26,3 +27,6 @@ class CookingView(View):
 
 class ShopView(TemplateView):
     template_name = "app/shop.html"
+
+class VideoView(TemplateView):
+    template_name = "app/video.html"
