@@ -2,17 +2,19 @@
 {% load static %}
 
 <div class="row py-4">
-  <div class="col-md-3"></div>
-  <div class="col-md-6 resizeimage">
-    <a class="navbar-brand" href="https://smalltrip.vercel.app/">
+  <div class="col-lg-3"></div>
+  <div class="col-lg-6 ">
+    <div>山登りの会「小さな旅友の会」</div>
+    <a class="resizeimage" href="https://smalltrip.vercel.app/">
       <img src="{% static 'img/yamanokai.jpg' %}">
     </a>
+    <!-- <div class="col-md-6 youtube"> -->
+    <div class="mt-4">有志による動画</div>
+    <div class="col-lg-6 my-2 iframe-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/GDdbCjY5Xfo?si=zso1tBtgdPCZV36d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
   </div>
-  <div class="col-md-3"></div>
-</div>
-<div class="row"></div>
-<div class="text-center py-4">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/GDdbCjY5Xfo?si=zso1tBtgdPCZV36d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="col-lg-3"></div>
 </div>
 
 {% endblock %}
