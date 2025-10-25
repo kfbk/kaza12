@@ -30,3 +30,6 @@ class ShopView(TemplateView):
 
 class VideoView(TemplateView):
     template_name = "app/video.html"
+
+def google_search_console(request):
+    return render(request, 'google/google51925de0612ccd11.html')
