@@ -20,9 +20,19 @@ class IndexView(View):
 class CookingView(View):
     def get(self, request, *args, **kwargs):
         cooking_data = Cooking.objects.all()
-
+        agemono_data = Cooking.objects.filter(category__name='揚げ物')
+        sasimi_data = Cooking.objects.filter(category__name='刺身')
+        tumami_data = Cooking.objects.filter(category__name='おつまみ')
+        yakimono_data = Cooking.objects.filter(category__name='焼き物')
+        nikomi_data = Cooking.objects.filter(category__name='煮込み・ご飯もの')
+        # print(f'agemono_data={agemono_data}')
         return render(request, 'app/cooking.html', {
             'cooking_data': cooking_data,
+            'agemono_data': agemono_data,
+            'sasimi_data': sasimi_data,
+            'tumami_data': tumami_data,
+            'yakimono_data': yakimono_data,
+            'nikomi_data': nikomi_data,
         })
 
 class ShopView(TemplateView):
