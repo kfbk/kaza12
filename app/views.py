@@ -43,3 +43,6 @@ class VideoView(TemplateView):
 
 def google_search_console(request):
     return render(request, 'google/google51925de0612ccd11.html')
+
+def sitemap(request):
+    return render(request, 'google/sitemap.xml')
