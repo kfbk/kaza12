@@ -122,6 +122,112 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card img-thumbnail mb-3">
+        <div class="card-body box4 text-center px-2 py-3">
+          <h5 class="font-weight-bold">清酒</h5>
+        </div>
+        {% for cooking in seisyu_data %}
+        {% if cooking.image %}
+        {% else %}
+        <div class="d-flex justify-content-between mx-4">
+          <div>
+          {{ cooking.name }}</div>
+          <div>
+          {{ cooking.price }} 円</div>
+        </div>
+        {% endif %}
+        {% empty %}
+        <p>まだ品がありません</p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card img-thumbnail mb-3">
+        <div class="card-body box4 text-center px-2 py-3">
+          <h5 class="font-weight-bold">ビール</h5>
+        </div>
+        {% for cooking in beer_data %}
+        {% if cooking.image %}
+        {% else %}
+        <div class="d-flex justify-content-between mx-4">
+          <div>
+          {{ cooking.name }}</div>
+          <div>
+          {{ cooking.price }} 円</div>
+        </div>
+        {% endif %}
+        {% empty %}
+        <p>まだ品がありません</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card img-thumbnail mb-3">
+        <div class="card-body box4 text-center px-2 py-3">
+          <h5 class="font-weight-bold">焼酎</h5>
+        </div>
+        {% for cooking in syoutyu_data %}
+        {% if cooking.image %}
+        {% else %}
+        <div class="d-flex justify-content-between mx-4">
+          <div>
+          {{ cooking.name }}</div>
+          <div>
+          {{ cooking.price }} 円</div>
+        </div>
+        {% endif %}
+        {% empty %}
+        <p>まだ品がありません</p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card img-thumbnail mb-3">
+        <div class="card-body box4 text-center px-2 py-3">
+          <h5 class="font-weight-bold">ボトル</h5>
+        </div>
+        {% for cooking in bottle_data %}
+        {% if cooking.image %}
+        {% else %}
+        <div class="d-flex justify-content-between mx-4">
+          <div>
+          {{ cooking.name }}</div>
+          <div>
+          {{ cooking.price }} 円</div>
+        </div>
+        {% endif %}
+        {% empty %}
+        <p>まだ品がありません</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card img-thumbnail mb-3">
+        <div class="card-body box4 text-center px-2 py-3">
+          <h5 class="font-weight-bold">お飲み物</h5>
+        </div>
+        {% for cooking in drink_data %}
+        {% if cooking.image %}
+        {% else %}
+        <div class="d-flex justify-content-between mx-4">
+          <div>
+          {{ cooking.name }}</div>
+          <div>
+          {{ cooking.price }} 円</div>
+        </div>
+        {% endif %}
+        {% empty %}
+        <p>まだ品がありません</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

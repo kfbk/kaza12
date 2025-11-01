@@ -25,6 +25,11 @@ class CookingView(View):
         tumami_data = Cooking.objects.filter(category__name='おつまみ')
         yakimono_data = Cooking.objects.filter(category__name='焼き物')
         nikomi_data = Cooking.objects.filter(category__name='煮込み・ご飯もの')
+        seisyu_data = Cooking.objects.filter(category__name='清酒')
+        beer_data = Cooking.objects.filter(category__name='ビール')
+        syoutyu_data = Cooking.objects.filter(category__name='焼酎')
+        bottle_data = Cooking.objects.filter(category__name='ボトル')
+        drink_data = Cooking.objects.filter(category__name='お飲み物')
         # print(f'agemono_data={agemono_data}')
         return render(request, 'app/cooking.html', {
             'cooking_data': cooking_data,
@@ -33,6 +38,11 @@ class CookingView(View):
             'tumami_data': tumami_data,
             'yakimono_data': yakimono_data,
             'nikomi_data': nikomi_data,
+            'seisyu_data': seisyu_data,
+            'beer_data': beer_data,
+            'syoutyu_data': syoutyu_data,
+            'bottle_data': bottle_data,
+            'drink_data': drink_data,
         })
 
 class ShopView(TemplateView):
